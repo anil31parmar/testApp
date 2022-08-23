@@ -1,0 +1,34 @@
+
+
+<!-- templet form -->
+<div class="row">
+
+  <form class="container" #registerForm="ngForm">
+
+    <h3>Register Form</h3>
+    <label>Email : </label>
+    <input
+     type="email"
+     name="email"
+     password="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+     required
+     ngModel
+     #email="ngModel"
+    />
+    <h6 class="red-text"  [hidden] ="email.valid || email.untouched" >Enter correct email</h6>
+
+    <label>Password : </label>
+    <input
+     type="password"
+     name="password"
+     minlength="6"
+     required ngModel
+     #password="ngModel"
+    />
+    <h6 class="red-text"  [hidden] ="password.valid || password.untouched" >Password is required</h6>
+
+    <button class="btn green" [disabled]="registerForm.invalid" (click)="register(registerForm)">Register</button>
+
+  </form>
+
+</div>

@@ -1,0 +1,21 @@
+
+
+<!-- reactive form -->
+<div class="row">
+
+  <form class="container" [formGroup]="logInForm">
+
+    <h3>Login Form</h3>
+    <label>Email : </label>
+    <input type="email" [formControl] = "email">
+    <h6 class="red-text"  [hidden] ="email.valid || email.untouched" >Enter correct email</h6>
+
+    <label>Password : </label>
+    <input type="password" [formControl] = "password">
+    <h6 class="red-text"  [hidden] ="password.valid || password.untouched" >Password is required</h6>
+
+    <button class="btn red" (click)="logIn()" [disabled]="logInForm.invalid">Save</button>
+
+  </form>
+
+</div>
