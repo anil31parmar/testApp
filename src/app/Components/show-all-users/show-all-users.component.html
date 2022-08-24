@@ -1,0 +1,24 @@
+
+  <h1>User Data</h1>
+
+  <!-- display all user data in table  -->
+  <table>
+
+    <button class="btn btn-secondary mb-3" routerLink="/addUser">Add User</button>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Role</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+
+    <tr  *ngFor="let data of getUsersData; let i = index">
+      <td><a [routerLink]="['/show-user-detail', data.id]">{{data.name}}</a></td>
+      <td>{{data.email}}</td>
+      <td>{{data.role}}</td>
+      <td><button class="btn btn-primary" [routerLink]="['/edit-user', data.id]">Edit</button></td>
+      <td><button class="btn btn-danger" (click)="deleteData(data, i)">Delete</button></td>
+    </tr>
+
+  </table>

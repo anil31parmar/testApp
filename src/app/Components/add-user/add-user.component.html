@@ -1,0 +1,44 @@
+
+<h1>Add User</h1>
+
+<div class="formPosition">
+
+  <form [formGroup]="addUserForm" (ngSubmit)="addNewUser()">
+
+    <div>
+      <label>Name : </label>
+      <input type="text" class="form-control" formControlName="name">
+      <h5 class="text-danger" [hidden]="name.valid|| name.untouched">Please enter valid name</h5>
+    </div><br>
+
+    <div>
+      <label>Email : </label>
+      <input type="text"  class="form-control" formControlName="email">
+      <h5 class="text-danger" [hidden]="email.valid|| email.untouched">Please enter valid email</h5>
+    </div><br>
+
+    <div>
+      <label>Password : </label>
+      <input type="password" class="form-control" formControlName="password">
+      <h5 class="text-danger" [hidden]="password.valid|| password.untouched">Please enter valid password</h5>
+    </div><br>
+
+    <div>
+      <label>Role : </label>
+      <select  class="form-control" id="exampleFormControlSelect1" formControlName="role">
+        <option value="user">user</option>
+        <option value="admin">admin</option>
+      </select>
+      <h5 class="text-danger" [hidden]="role.valid|| role.untouched">Please select user</h5>
+    </div><br>
+
+      <div class="text-center">
+        <button class= "btn btn-secondary" type="submit" [disabled] = "email.invalid && name.invalid && password.invalid && role.invalid">Add User</button>
+      </div>
+
+      <div class="text-center">
+        <button class="btn btn-secondary mt-3" routerLink="/">Back</button>
+      </div>
+
+  </form>
+</div>

@@ -1,0 +1,24 @@
+<h1>Edit User</h1>
+
+<div class="formPosition">
+  <form [formGroup]="editDataForm" (ngSubmit)="editData()">
+
+      <label>Name : </label>
+      <input type="text"  class="form-control" formControlName="name">
+      <br><br>
+
+      <label>Email : </label>
+      <input type="text" class="form-control" formControlName="email">
+      <br><br>
+
+      <div class="text-center">
+        <button class="btn btn-secondary" type="submit" >Edit User</button>
+      </div>
+      <div class="text-center">
+        <button class="btn btn-secondary mt-3" routerLink="/">Back</button>
+      </div>
+
+</form>
+</div>
+
+

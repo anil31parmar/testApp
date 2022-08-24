@@ -14,6 +14,11 @@ import { UsersComponent } from './Components/users/users.component';
 import { UserComponent } from './Components/user/user.component';
 import {HttpClientModule} from '@angular/common/http'
 import { AuthGuard } from './AuthGuard/auth.guard';
+import { AddUserComponent } from './Components/add-user/add-user.component';
+import { EditUserComponent } from './Components/edit-user/edit-user.component';
+import { ShowAllUsersComponent } from './Components/show-all-users/show-all-users.component';
+import { ShowUserDetailComponent } from './Components/show-user-detail/show-user-detail.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -24,7 +29,11 @@ import { AuthGuard } from './AuthGuard/auth.guard';
     NotFoundComponent,
     HOMEComponent,
     UsersComponent,
-    UserComponent
+    UserComponent,
+    AddUserComponent,
+    EditUserComponent,
+    ShowAllUsersComponent,
+    ShowUserDetailComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,6 +41,7 @@ import { AuthGuard } from './AuthGuard/auth.guard';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
+    NgbModule,
 
 
   ],

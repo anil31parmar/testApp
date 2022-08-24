@@ -6,6 +6,7 @@
       <li><a routerLink="/register" *ngIf="!auth.loggedIn()" routerLinkActive="active">Register</a></li>
       <li><a routerLink="/login" *ngIf="auth.loggedIn()" routerLinkActive="active" (click)="auth.logOut()">Logout</a></li>
       <li><a routerLink="/user" routerLinkActive="active">Users</a></li>
+      <li><a routerLink="/show-all-users" routerLinkActive="active">Show all Users</a></li>
     </ul>
   </div>
 </nav>
