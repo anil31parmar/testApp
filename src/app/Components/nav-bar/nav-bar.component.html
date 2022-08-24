@@ -2,9 +2,10 @@
   <div class="nav-wrapper">
     <a href="/" class="brand-logo">My App</a>
     <ul id="nav-mobile" class="right">
-      <li><a routerLink="/login">Login</a></li>
-      <li><a routerLink="/register">Register</a></li>
-
+      <li><a routerLink="/login" *ngIf="!auth.loggedIn()" routerLinkActive="active">Login</a></li>
+      <li><a routerLink="/register" *ngIf="!auth.loggedIn()" routerLinkActive="active">Register</a></li>
+      <li><a routerLink="/login" *ngIf="auth.loggedIn()" routerLinkActive="active" (click)="auth.logOut()">Logout</a></li>
+      <li><a routerLink="/user" routerLinkActive="active">Users</a></li>
     </ul>
   </div>
 </nav>

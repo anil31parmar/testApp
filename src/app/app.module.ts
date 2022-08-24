@@ -13,6 +13,7 @@ import { HOMEComponent } from './Components/home/home.component';
 import { UsersComponent } from './Components/users/users.component';
 import { UserComponent } from './Components/user/user.component';
 import {HttpClientModule} from '@angular/common/http'
+import { AuthGuard } from './AuthGuard/auth.guard';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import {HttpClientModule} from '@angular/common/http'
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+
 
   ],
   providers: [],

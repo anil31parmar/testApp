@@ -3,8 +3,6 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
 
-
-
 @Injectable({
   providedIn: 'root'
 })
@@ -26,6 +24,5 @@ export class JokeService {
     // console.log(this.http.get(environment.jokeApi));
     return this.http.get(environment.jokeApiScience);
   }
-
 
 }

@@ -19,6 +19,14 @@ export class AuthService {
     return this.http.post(environment.logInApi, data).pipe(catchError(this.handleError));
   }
 
+  loggedIn(){
+    return !!localStorage.getItem('token') // !! means true or false - return boolean value
+  }
+
+  logOut(){
+    return localStorage.removeItem('token');
+  }
+
    ///error handling
    handleError(error:any){
     window.alert(error.error.message)
