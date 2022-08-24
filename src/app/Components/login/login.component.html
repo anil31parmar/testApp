@@ -14,7 +14,7 @@
     <input type="password" [formControl] = "password">
     <h6 class="red-text"  [hidden] ="password.valid || password.untouched" >Password is required</h6>
 
-    <button class="btn red" (click)="logIn()" [disabled]="logInForm.invalid">Save</button>
+    <button class="btn red" (click)="logIn()" [disabled]="logInForm.invalid">Login</button>
 
   </form>
 

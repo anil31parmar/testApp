@@ -7,6 +7,8 @@ export const environment = {
   jokeApiDev: 'https://api.chucknorris.io/jokes/random?category=dev',
   jokeApiMoney: 'https://api.chucknorris.io/jokes/random?category=money',
   jokeApiScience: 'https://api.chucknorris.io/jokes/random?category=science',
+  registerApi: 'https://node-initial-hitesh.herokuapp.com/v1/auth/register',
+  logInApi: 'https://node-initial-hitesh.herokuapp.com/v1/auth/login'
 };
 
 /*
