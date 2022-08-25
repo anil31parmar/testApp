@@ -25,11 +25,17 @@ export class AddUserComponent implements OnInit {
 
   constructor(private service:UsersDataService, private router:Router) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
 
   addNewUser(){
     this.service.postData(this.addUserForm.value as user).subscribe((result)=>{
-      this.router.navigateByUrl('/');
+      this.router.navigateByUrl('/show-all-users');
     })
   }
+
+
+
+
+
 }

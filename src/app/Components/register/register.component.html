@@ -1,11 +1,10 @@
-
-
 <!-- templet form -->
-<div class="row">
+<!-- <div >
 
-  <form class="container" #registerForm="ngForm">
+  <form  #registerForm="ngForm">
 
     <h3>Register Form</h3>
+
     <label>Name : </label>
     <input
      type="text"
@@ -24,7 +23,7 @@
      ngModel
      #email="ngModel"
     />
-    <h6 class="red-text"  [hidden] ="email.valid || email.untouched" >Enter correct email</h6>
+    <h6   [hidden] ="email.valid || email.untouched" >Enter correct email</h6>
 
     <label>Password : </label>
     <input
@@ -34,10 +33,53 @@
      required ngModel
      #password="ngModel"
     />
-    <h6 class="red-text"  [hidden] ="password.valid || password.untouched" >Password is required</h6>
+    <h6   [hidden] ="password.valid || password.untouched" >Password is required</h6>
 
-    <button class="btn green" [disabled]="registerForm.invalid" (click)="register(registerForm)">Register</button>
+    <button [disabled]="registerForm.invalid" (click)="register(registerForm)">Register</button>
 
+  </form>
+
+</div> -->
+
+
+<!-- bootstrap from  -->
+<div class="formPosition" >
+
+  <h3>Register Form</h3>
+  <form  #registerForm="ngForm">
+    <div class="mb-3">
+      <label class="form-label">Name</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+     name="name"
+     required
+     ngModel
+     #name="ngModel"
+     >
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+      name="email"
+      password="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+      required
+      ngModel
+      #email="ngModel"
+      >
+      <h6   [hidden] ="email.valid || email.untouched" >Enter correct email</h6>
+    </div>
+
+    <div class="mb-3">
+      <label  class="form-label">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1"
+      name="password"
+      minlength="6"
+      required ngModel
+      #password="ngModel"
+      >
+      <h6   [hidden] ="password.valid || password.untouched" >Password is required</h6>
+    </div>
+    <button class="btn btn-secondary" [disabled]="registerForm.invalid" (click)="register(registerForm)">Register</button>
   </form>
 
 </div>

@@ -1,10 +1,10 @@
 <!-- <h2>id for requested user is = {{id}}</h2> -->
 
 
-<div class="cyan lighten-5" style="padding: 100px;">
+<!-- <div class="cyan lighten-5" style="padding: 100px;"> -->
 
   <!-- dev realted jokes -->
-  <div >
+  <!-- <div >
     <div class="row" >
       <div class="col s12  mx ">
         <div class="card blue-grey darken-1">
@@ -14,15 +14,14 @@
           </div>
           <div class="card-action">
             <button class="btn" (click)="getApiForDevJoke()">jokes</button>
-            <!-- <a href="#">This is a link</a> -->
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <!-- money related jokes -->
-  <div >
+  <!-- <div >
     <div class="row" >
       <div class="col s12 mx ">
         <div class="card blue-grey darken-1">
@@ -32,16 +31,15 @@
           </div>
           <div class="card-action">
             <button class="btn" (click)="getApiForMoneyJoke()">jokes</button>
-            <!-- <a href="#">This is a link</a> -->
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
 
   <!-- science realted jokes -->
-  <div >
+  <!-- <div >
     <div class="row" >
       <div class="col s12 mx ">
         <div class="card blue-grey darken-1">
@@ -51,10 +49,46 @@
           </div>
           <div class="card-action">
             <button class="btn" (click)="getApiForScienceJoke()">jokes</button>
-            <!-- <a href="#">This is a link</a> -->
           </div>
         </div>
       </div>
+    </div>
+  </div> -->
+
+<!-- </div> -->
+
+
+<!-- bootstrap -->
+
+<div class="formPosition">
+
+  <div class="card">
+    <div class="card-header">
+      Developer Jokes
+    </div>
+    <div class="card-body">
+      <p class="card-text">{{jokeDev}}</p>
+      <a class="btn btn-primary" (click)="getApiForDevJoke()">Press to change joke</a>
+    </div>
+  </div><br><br>
+
+  <div class="card">
+    <div class="card-header">
+      Money Jokes
+    </div>
+    <div class="card-body">
+      <p class="card-text">{{jokeMoney}}</p>
+      <a class="btn btn-primary" (click)="getApiForMoneyJoke()">Press to change joke</a>
+    </div>
+  </div><br><br>
+
+  <div class="card">
+    <div class="card-header">
+      Science Jokes
+    </div>
+    <div class="card-body">
+      <p class="card-text">{{jokeScience}}</p>
+      <a  class="btn btn-primary" (click)="getApiForScienceJoke()">Press to change joke</a>
     </div>
   </div>
 

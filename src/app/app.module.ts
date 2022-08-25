@@ -13,7 +13,6 @@ import { HOMEComponent } from './Components/home/home.component';
 import { UsersComponent } from './Components/users/users.component';
 import { UserComponent } from './Components/user/user.component';
 import {HttpClientModule} from '@angular/common/http'
-import { AuthGuard } from './AuthGuard/auth.guard';
 import { AddUserComponent } from './Components/add-user/add-user.component';
 import { EditUserComponent } from './Components/edit-user/edit-user.component';
 import { ShowAllUsersComponent } from './Components/show-all-users/show-all-users.component';
@@ -42,7 +41,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     FormsModule,
     HttpClientModule,
     NgbModule,
-
 
   ],
   providers: [],

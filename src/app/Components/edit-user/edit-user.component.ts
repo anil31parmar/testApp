@@ -36,7 +36,7 @@ export class EditUserComponent implements OnInit {
     //any with function name removed
     editData() {
       this.service.updateData(this.getId, this.editDataForm.value as user).subscribe(() => {
-          this.router.navigateByUrl('/')
+          this.router.navigateByUrl('/show-all-users')
         })
     }
 }

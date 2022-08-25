@@ -1,7 +1,7 @@
 
 
 <!-- reactive form -->
-<div class="row">
+<!-- <div class="row">
 
   <form class="container" [formGroup]="logInForm">
 
@@ -18,4 +18,31 @@
 
   </form>
 
+</div> -->
+
+
+
+<!-- bootstrap -->
+
+<div class="formPosition">
+
+  <h3>Login Form</h3>
+  <form  [formGroup]="logInForm">
+
+    <div class="mb-3">
+      <label class="form-label">Email : </label>
+      <input type="email" [formControl] = "email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <h6 [hidden] ="email.valid || email.untouched" >Enter correct email</h6>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Password : </label>
+      <input type="password" [formControl] = "password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <h6 [hidden] ="password.valid || password.untouched" >Password is required</h6>
+    </div>
+    <button class="btn btn-secondary" (click)="logIn()" [disabled]="logInForm.invalid">Login</button>
+
+  </form>
+
 </div>
+
